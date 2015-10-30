@@ -8,6 +8,14 @@ var Router = Ember.Router.extend({
 Router.map(function() {
   this.route('moo');
   this.route('book');
+
+  this.route('chapters', {
+    path: 'book/:book_id'
+  });
+
+  this.route('chapter', {
+    path: 'book/:book_id/:chapter_id'
+  });
 });
 
 export default Router;
