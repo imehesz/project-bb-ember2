@@ -2,6 +2,8 @@
 
 books
 
-{{#each model as |item|}}
-  <div>{{item.bookId}}</div>
-{{/each}}
+<ul>
+  {{#each model.books as |item|}}
+    <li>{{#link-to "chapters" item.bookId}}{{item.bookId}}{{/link-to}}</li>
+  {{/each}}
+</ul>
