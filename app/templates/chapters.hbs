@@ -1,3 +1,9 @@
 {{outlet}}
 
 chapters
+
+<ul>
+  {{#each model.chapters as |item|}}
+    <li>{{#link-to "chapter" model.bookId item}}{{item}}{{/link-to}}</li>
+  {{/each}}
+</ul>
