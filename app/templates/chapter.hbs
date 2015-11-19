@@ -1,3 +1,10 @@
 {{outlet}}
 
+{{#link-to "chapters" model.bookId}}Back to Book{{/link-to}} 
 verses
+
+<ul>
+  {{#each model.verses as |item|}}
+    <li><sup>{{item.verseId}}</sup> {{item.text}}</li>
+  {{/each}}
+</ul>
